@@ -5,7 +5,7 @@ import "./Expense.css";
 const Expense =(props) => {
   return (
     <Card className='expenses'>
-        <Expenceitem 
+        {/* <Expenceitem 
   date={props.item[0].date} 
   title = {props.item[0].title} 
   amount = {props.item[0].amount}/>
@@ -20,7 +20,26 @@ const Expense =(props) => {
   <Expenceitem 
   date={props.item[3].date} 
   title = {props.item[3].title} 
-  amount = {props.item[2].amount}/>
+  amount = {props.item[3].amount}/> */}
+
+
+  {/* we do it by map method  */}
+  {
+      props.item.map(
+        //ider jo expence hai vo dummy expence s expenses m aa rha hai app.js m phir yahan props k through item s map krke
+        //parameter m pass kiya hai expense name s
+        expence =>(
+
+        
+          <Expenceitem 
+          date={expence.date} 
+          title = {expence.title} 
+          amount = {expence.amount}/>
+          
+          )
+
+      )
+  }
     </Card>
   )
 }
